@@ -959,6 +959,7 @@ body.ie ._ibg img {
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   height: 100%;
+  padding: 10px;
 }
 
 .regwindow__right {
@@ -968,6 +969,7 @@ body.ie ._ibg img {
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   height: 100%;
+  padding: 10px;
 }
 
 .left {
@@ -1217,7 +1219,6 @@ body.ie ._ibg img {
             flex-direction: column;
     height: auto;
     top: 15vh;
-    padding: 10px;
   }
 
   .left__or {
