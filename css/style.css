@@ -940,11 +940,11 @@ body.ie ._ibg img {
 
 .regwindow__body {
   width: 50%;
-  height: 55%;
+  height: 55vh;
   background-color: #fff;
   position: absolute;
   left: 25%;
-  top: calc(50% - 27%);
+  top: 22vh;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
@@ -1010,7 +1010,7 @@ body.ie ._ibg img {
 .left__title {
   letter-spacing: 1px;
   margin-bottom: 40px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .left__fb {
@@ -1216,7 +1216,8 @@ body.ie ._ibg img {
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
-    top: 12%;
+    top: 15vh;
+    padding: 10px;
   }
 
   .left__or {
@@ -1234,6 +1235,29 @@ body.ie ._ibg img {
   .header__c {
     max-width: none;
     padding: 0 10px;
+  }
+}
+
+@media (max-width: 541px) {
+  .left button {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .left__num {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+
+  .right__title {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .right__option1,
+  .right__option2 {
+    margin-bottom: 10px;
+    font-size: 16px;
   }
 }
 
