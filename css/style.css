@@ -299,6 +299,7 @@ body._lock {
 .left__or {
   background-color: #fff;
   position: absolute;
+  z-index: 20;
   padding: 10px 8px;
   border-radius: 50%;
   right: -20px;
@@ -325,6 +326,10 @@ body._lock {
           align-items: center;
 }
 
+.right__body-1 {
+  padding-top: 100px;
+}
+
 .right__title {
   font-size: 30px;
   margin-bottom: 30px;
@@ -336,8 +341,7 @@ body._lock {
   margin-bottom: 15px;
 }
 
-.right__option1,
-.right__option2 {
+.right__option {
   font-size: 20px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-bottom: 15px;
@@ -358,8 +362,7 @@ body._lock {
   transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 }
 
-.right__option1:hover,
-.right__option2:hover {
+.right__option:hover {
   background-size: 230%, 100%;
   -webkit-background-size: 230%, 100%;
 }
@@ -496,8 +499,7 @@ body._lock {
     margin-top: 10px;
   }
 
-  .right__option1,
-  .right__option2 {
+  .right__option {
     margin-bottom: 10px;
     font-size: 16px;
   }
@@ -520,8 +522,7 @@ body._lock {
             align-items: stretch;
   }
 
-  .right__option1,
-  .right__option2 {
+  .right__option {
     width: auto;
   }
 }
