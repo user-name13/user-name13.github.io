@@ -19,8 +19,11 @@ $(document).ready(function () {
 
 		console.log(`You've chosen ${sex}`);
 
-		$('.right__body').fadeOut(0);
-		$('.right__body-1').fadeIn(300);
+		// $('.right__body').fadeOut(0);
+		// $('.right__body-1').fadeIn(300);
+
+		$('.right__body').fadeOut(50);
+		$('.right__body-1').fadeIn(500);
 
 		console.log('Hello');
 	})
