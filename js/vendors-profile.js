@@ -12,6 +12,17 @@ $(document).ready(function () {
 	$('#menu').hover(function () {
 		$('.hidein').toggleClass("active");
 	})
+
+	// $('.icon-menu').click(function () {
+
+	// 	// $('.icon-menu, .menu').toggleClass("_active");
+
+	// 	// $('.icon-menu, .menu').toggleClass("_active");
+	// 	// $('.icon-menu, .menu').toggleClass("_inactive");
+
+	// 	// $('body').toggleClass("active");
+	// })
+
 })
 
 // When the user scrolls the page, execute myFunction
