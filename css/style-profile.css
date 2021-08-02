@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;
 
+300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -107,6 +109,10 @@ body._lock {
   overflow: hidden;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 ._container {
   max-width: 1170px;
   margin: 0 auto;
@@ -121,9 +127,13 @@ body._lock {
   background-color: #fff;
   height: 60px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(48, 48, 48, 0.7);
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.295);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.295);
+}
+
+.header__logor {
+  position: absolute;
 }
 
 .header__body {
@@ -141,14 +151,18 @@ body._lock {
 
 .header__logo {
   position: relative;
-  left: 300px;
+  left: 30px;
 }
 
 .header__logo img {
   height: 50px;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
 }
 
 .menu {
+  font-family: "Roboto", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,14 +172,35 @@ body._lock {
 }
 
 .menu li {
-  margin-right: 28px;
+  margin-right: 38px;
+}
+
+.menu li:last-child {
+  position: relative;
+  margin-right: 0px;
+  padding-right: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu__item {
-  color: black;
-  font-family: Lato;
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
   position: relative;
+  color: gainsboro;
+}
+
+.menu__item-menu {
+  line-height: 60px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: gainsboro;
 }
 
 .menu__item:before {
@@ -174,16 +209,71 @@ body._lock {
   transition: all 0.4s ease 0s;
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   width: 0px;
   height: 0px;
-  background-color: #000;
 }
 
 .menu__item:hover:before {
   height: 1px;
   width: 100%;
-  background-color: #000;
+  background-color: white;
+}
+
+.menu__item.active:before {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+
+.menu__item-h {
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 16px;
+}
+
+.menu__item-h:hover:before {
+  height: 0.5px;
+}
+
+.menu .hidein {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  height: 160px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.menu .hidein.active {
+  display: inline;
+  opacity: 1;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(48, 48, 48, 0.7);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .main {
+  padding-top: 60px;
 }
 
 .page {
@@ -216,10 +306,6 @@ body._lock {
   display: flex;
 }
 
-.main__body.active {
-  overflow: hidden;
-}
-
 .sextion-left {
   padding-right: 30px;
   -webkit-box-flex: 0;
@@ -230,6 +316,7 @@ body._lock {
 .images {
   position: relative;
   margin-bottom: 35px;
+  z-index: -1;
 }
 
 .images__big-img {
@@ -433,6 +520,7 @@ body._lock {
     width: 100%;
     height: 2px;
     background-color: #181818;
+    background-color: #c8c8c8;
   }
 
   .icon-menu span:first-child {
@@ -448,6 +536,7 @@ body._lock {
     -webkit-transform: scale(0);
         -ms-transform: scale(0);
             transform: scale(0);
+    background-color: #fff;
   }
 
   .icon-menu._active span:first-child {
@@ -465,7 +554,48 @@ body._lock {
   }
 
   .header__logo {
-    left: 50px;
+    left: -10px;
+  }
+
+  .menu {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .menu li {
+    margin: 30px 0px 30px 0px;
+  }
+
+  .menu li:last-child {
+    display: block;
+    padding-right: 0;
+  }
+
+  .menu__item {
+    line-height: 25px;
+  }
+
+  .menu__item-menu {
+    display: none;
+    line-height: 20;
+  }
+
+  .menu__item-h {
+    display: block;
+    top: 0;
+    left: 0;
+    line-height: 25px;
+  }
+
+  .menu .hidein {
+    display: inline;
+    opacity: 1;
+    position: relative;
+    background: none;
+    text-align: center;
+    top: 0;
+    display: block;
+    width: auto;
   }
 
   .menu {
@@ -483,17 +613,26 @@ body._lock {
         align-content: space-around;
     text-align: center;
     top: -2000px;
+    text-transform: uppercase;
   }
 
   .menu._active {
     top: 0;
     right: 0px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.75);
   }
 
   .menu li a {
     color: white;
-    font-size: 22px;
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 1100px) and (max-width: 1100px) {
+  .menu li a {
+    font-weight: 100;
+    font-size: 20px;
   }
 }
 
