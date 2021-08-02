@@ -124,6 +124,7 @@ body.active {
 
 .header {
   position: relative;
+  z-index: 200;
   background-color: #fff;
   height: 60px;
   width: 100%;
@@ -177,7 +178,7 @@ body.active {
 
 .menu li:last-child {
   position: relative;
-  margin-right: 0px;
+  margin: 0px;
   padding-right: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -230,7 +231,7 @@ body.active {
   top: 20px;
   left: 20px;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 16px;
 }
 
@@ -557,13 +558,8 @@ body.active {
     left: -10px;
   }
 
-  .menu {
-    display: block;
-    padding-top: 20px;
-  }
-
   .menu li {
-    margin: 30px 0px 30px 0px;
+    margin: 20px 0px 20px 0px;
   }
 
   .menu li:last-child {
@@ -581,21 +577,21 @@ body.active {
   }
 
   .menu__item-h {
-    display: block;
-    top: 0;
+    display: inline-block;
+    top: 0px;
     left: 0;
     line-height: 25px;
   }
 
   .menu .hidein {
-    display: inline;
+    display: block;
     opacity: 1;
     position: relative;
     background: none;
     text-align: center;
-    top: 0;
     display: block;
     width: auto;
+    top: 0px;
   }
 
   .menu {
@@ -607,10 +603,11 @@ body.active {
     height: 100vh;
     width: 100%;
     z-index: 20;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-line-pack: distribute;
-        align-content: space-around;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
     text-align: center;
     top: -2000px;
     text-transform: uppercase;
