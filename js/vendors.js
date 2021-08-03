@@ -8,6 +8,17 @@ $(document).ready(function () {
 	// );
 	$('.right__body-1').hide(0);
 
+	// $('.header__langs').hover(function () {
+	// 	$('.header__languages').fadeIn('active');
+	// })
+
+	$('.header__langs').click(function () {
+		$('.header__languages').fadeToggle(300);
+		$('.header__darken').fadeToggle(300);
+		$('body').toggleClass("active");
+	});
+	///
+
 	$('.right__option').click(function () {
 		let i = $(this).data("answ1");
 		// console.log(`${i}`);

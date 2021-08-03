@@ -120,6 +120,7 @@ body.active {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   position: relative;
+  top: 0px;
   z-index: 200;
   background-color: #fff;
   height: 60px;
