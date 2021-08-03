@@ -423,6 +423,7 @@ body.active {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 3.5px;
 }
 
 .images__big-plus {
@@ -460,6 +461,8 @@ body.active {
 }
 
 .small div {
+  border-radius: 3.5px;
+  overflow: hidden;
   width: 90px;
   height: 90px;
   background: -webkit-gradient(linear, left top, right top, from(#ff5d16), to(#ffc516));
@@ -480,13 +483,16 @@ body.active {
 }
 
 .profiledata__title {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
   padding: 0px 30px 0px 30px;
   line-height: 50px;
   height: 50px;
-  border-radius: 10px;
-  background-color: rgba(220, 220, 220, 0.603);
-  font-family: Lato;
+  border-radius: 3.5px;
+  background-color: rgba(177, 177, 177, 0.603);
+  font-family: Roboto;
+  color: #333333;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.477);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.477);
 }
@@ -513,7 +519,7 @@ body.active {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.477);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.477);
   height: 800px;
-  border-radius: 10px;
+  border-radius: 3.5px;
 }
 
 .sextion-right {
@@ -588,6 +594,14 @@ body.active {
   100% {
     background-size: 100vw 200vh;
   }
+}
+
+.footer__link {
+  color: #bebebe;
+}
+
+.footer__body:before {
+  background-color: #bebebe;
 }
 
 @media (max-width: 1182px) {
