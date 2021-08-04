@@ -6760,6 +6760,7 @@ body.active {
 }
 
 .rewards {
+  color: #999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6772,9 +6773,6 @@ body.active {
 }
 
 .rewards__gift {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 80px;
-          flex: 0 0 80px;
   margin-bottom: 20px;
   padding: 15px 20px;
   -webkit-transition: all 0.5s ease-out 0s;
@@ -6787,6 +6785,23 @@ body.active {
   -webkit-animation: shaking 0.2s ease-in-out infinite alternate;
           animation: shaking 0.2s ease-in-out infinite alternate;
   color: #dbdbdb;
+}
+
+.nos {
+  max-width: 80px;
+  display: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.nos img {
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.nos.active {
+  display: inline;
 }
 
 @-webkit-keyframes shaking {

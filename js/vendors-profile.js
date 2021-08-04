@@ -13,6 +13,15 @@ $(document).ready(function () {
 		$('.hidein').toggleClass("active");
 	})
 
+	$('.profiledata__title-p').click(function () {
+		//  $(this).attr('id', 'value');
+		$(this).fadeOut(200, function () {
+			$(this).siblings().fadeIn(300);
+		});
+		// $('.nos').show();
+		// $(this).siblings().addClass('active');
+	})
+
 	// $('.icon-menu').click(function () {
 
 	// 	// $('.icon-menu, .menu').toggleClass("_active");
