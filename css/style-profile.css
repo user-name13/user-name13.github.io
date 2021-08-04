@@ -6429,7 +6429,7 @@ body.active {
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 
 .sticky + .main {
-  padding-top: 110px;
+  padding-top: 119px;
 }
 
 .footer {
@@ -6544,7 +6544,7 @@ body.active {
 .bg {
   min-width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   left: 0;
   top: 0;
@@ -6558,10 +6558,10 @@ body.active {
 }
 
 .bg__darken {
-  background-color: #3d3d3d;
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: -1;
   left: 0;
   top: 0;
@@ -6719,15 +6719,15 @@ body.active {
   margin-bottom: 0px;
 }
 
+.profiledata {
+  overflow: hidden;
+}
+
 .profiledata__content {
   padding: 20px;
   font-family: Roboto;
   text-align: left;
   color: #e6e6e6;
-}
-
-.profiledata__content p i {
-  text-align: right;
 }
 
 .profiledata__body-t {
@@ -6757,6 +6757,60 @@ body.active {
 
 .profiledata__title-f .profiledata__text:before {
   bottom: 12px;
+}
+
+.rewards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 80px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.rewards__gift {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  -webkit-transition: all 0.5s ease-out 0s;
+  -o-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+  cursor: pointer;
+}
+
+.rewards__gift:hover {
+  -webkit-animation: shaking 0.2s ease-in-out infinite alternate;
+          animation: shaking 0.2s ease-in-out infinite alternate;
+  color: #dbdbdb;
+}
+
+@-webkit-keyframes shaking {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+}
+
+@keyframes shaking {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
 }
 
 @-webkit-keyframes animate-bg-size {
@@ -7055,6 +7109,14 @@ body.active {
 
   .main {
     padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .rewards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
